@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>CV - Hà Tấn Phát</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background: #f5f7fa;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      background: linear-gradient(180deg, #1c1c1c, #2b2b2b);
+      color: white;
+      padding: 20px;
+      min-height: 100vh;
+      box-shadow: 3px 0 8px rgba(0,0,0,0.2);
+    }
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 15px;
+      border: 4px solid #f9a825;
+      transition: transform 0.3s ease;
+    }
+    .sidebar img:hover {
+      transform: scale(1.05);
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .sidebar p.role {
+      text-align: center;
+      font-size: 14px;
+      color: #f9a825;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      border-bottom: 2px solid #f9a825;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .sidebar ul li:hover {
+      color: #f9a825;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+    .content h3 {
+      color: #1c1c1c;
+      border-left: 5px solid #f9a825;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+    .content p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Project */
+    .project {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+    .project h4 {
+      margin: 0 0 8px;
+      color: #007BFF;
+    }
+    .project p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    /* Skills */
+    .skills {
+      margin-top: 20px;
+    }
+    .skill {
+      margin-bottom: 12px;
+    }
+    .skill-name {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .progress {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 8px;
+    }
+    .progress-bar {
+      height: 8px;
+      background: linear-gradient(90deg, #007BFF, #00c6ff);
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+    .progress-bar.active {
+      width: var(--progress);
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="06g.jpg" alt="avatar">
+    <h2>HÀ TẤN PHÁT</h2>
+    <p class="role">Thực Tập Sinh IT - Web Developer</p>
+
+    <div class="section-title"><i class="fa-solid fa-user"></i> Thông Tin Cá Nhân</div> 
+    <ul>
+      <li><i class="fa-solid fa-calendar-days"></i> <b>Ngày sinh:</b> 22/02/2005</li>
+      <li><i class="fa-solid fa-phone"></i> <b>Điện thoại:</b> 0338068613 & 0901327720</li>
+      <li><i class="fa-solid fa-envelope"></i> <b>Email:</b> hatanphat2222005@gmail.com</li>
+      <li><i class="fa-solid fa-location-dot"></i> <b>Địa chỉ:</b> Chung Cư Sky 9, Thủ Đức</li>
+      <li><i class="fa-brands fa-github"></i> <b>Github:</b> github.com/phatdev</li>
+    </ul>
+
+    <div class="section-title"><i class="fas fa-graduation-cap"></i> Học vấn</div>
+    <p>Sinh viên ngành CNTT<br>Trường Cao Đẳng Kỹ Nghệ II<br>(2023 - nay)</p>
+
+    <div class="section-title"><i class="fa-solid fa-language"></i> Ngoại ngữ</div>
+    <p>Tiếng Anh: Đọc hiểu tài liệu kỹ thuật, giao tiếp cơ bản</p>
+
+    <div class="section-title">Kỹ năng</div>
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">HTML/CSS</div>
+        <div class="progress"><div class="progress-bar" style="--progress: 90%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="progress"><div class="progress-bar" style="--progress: 75%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">PHP/MySQL</div>
+        <div class="progress"><div class="progress-bar" style="--progress: 80%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Angular</div>
+        <div class="progress"><div class="progress-bar" style="--progress: 70%;"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h3>Mục tiêu nghề nghiệp</h3>
+    <p>
+      Mong muốn thực tập vị trí <b>Web Developer</b> để áp dụng kiến thức HTML, CSS,
+      JavaScript và các framework (Bootstrap, Angular, PHP, ASP.NET) vào thực tế. 
+      Học hỏi thêm quy trình phát triển phần mềm, rèn luyện teamwork và mở rộng 
+      hiểu biết về Backend. Đồng thời khám phá các công nghệ mới như React, Vue.js
+      để mở rộng kiến thức và ứng dụng vào các dự án tương lai.
+    </p>
+
+    <h3>Dự án tiêu biểu</h3>
+    <div class="project">
+      <h4>Website bán giày</h4>
+      <p><b>Mô tả:</b> Website thương mại điện tử bán giày, có giỏ hàng, đăng nhập.</p>
+      <p><b>Công nghệ:</b> PHP, MySQL, Bootstrap</p>
+      <p><b>Vai trò:</b> Thiết kế giao diện, lập trình giỏ hàng.</p>
+    </div>
+
+    <div class="project">
+      <h4>Website quản lý sách</h4>
+      <p><b>Mô tả:</b> Quản lý sách: thêm/xóa/sửa, tìm kiếm sách.</p>
+      <p><b>Công nghệ:</b> PHP, MySQL, Sublime Text 3</p>
+      <p><b>Vai trò:</b> Xây dựng toàn bộ hệ thống CRUD.</p>
+    </div>
+
+    <div class="project">
+      <h4>Angular - Reactive Forms</h4>
+      <p><b>Mô tả:</b> Form đăng ký người dùng, lưu dữ liệu LocalStorage, hiển thị danh sách.</p>
+      <p><b>Công nghệ:</b> Angular, TypeScript</p>
+      <p><b>Vai trò:</b> Code logic Reactive Forms, validation, service lưu trữ.</p>
+    </div>
+
+    <h3>Kinh nghiệm học tập</h3>
+    <p>- Thực hiện nhiều bài tập lớn liên quan đến thiết kế website và quản lý dữ liệu.</p>
+    <p>- Thành thạo sử dụng HTML, CSS, JavaScript để xây dựng giao diện web.</p>
+    <p>- Tham gia làm việc nhóm, phân chia công việc và sử dụng GitHub để quản lý source code.</p>
+    <p>- Từng xây dựng và triển khai các dự án nhỏ với PHP, MySQL, Angular.</p>
+  </div>
+
+  <script>
+    // Kích hoạt hiệu ứng progress bar sau khi load trang
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".progress-bar").forEach(bar => {
+        bar.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
